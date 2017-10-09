@@ -12190,7 +12190,7 @@ function Footer() {
 		// CONVERT CODEPAGE
 		if ($this->usingCoreFont) { $hd = mb_convert_encoding($hd,$this->mb_enc,'UTF-8'); }
 		// DIRECTIONALITY RTL
-		$this->magic_reverse_dir($hd, true, $this->directionality);	// *RTL*
+		$this->magic_reverse_dir($hd, false, $this->directionality);	// *RTL*
 		// Font-specific ligature substitution for Indic fonts
 		if (isset($this->CurrentFont['indic']) && $this->CurrentFont['indic']) $this->ConvertIndic($hd);	// *INDIC*
 		$align = $pos;
